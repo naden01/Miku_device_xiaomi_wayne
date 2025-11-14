@@ -5,9 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Maintaier
-MIKU_MASTER := xiaoleGun
-
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -15,11 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from wayne device
 $(call inherit-product, device/xiaomi/wayne/device.mk)
 
-# Inherit some common Miku UI stuff.
-$(call inherit-product, vendor/miku/build/product/miku_product.mk)
+# Inherit some common LineageOS stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := miku_wayne
+PRODUCT_NAME := lineage_wayne
 PRODUCT_DEVICE := wayne
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 6X
