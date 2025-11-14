@@ -2,7 +2,6 @@ cc_binary {
     name: "android.hardware.power-service.wayne-libperfmgr",
     defaults: [
         "android.hardware.power-ndk_shared",
-        "power_libperfmgr_defaults",
     ],
     relative_install_path: "hw",
     init_rc: ["android.hardware.power-service.wayne-libperfmgr.rc"],
