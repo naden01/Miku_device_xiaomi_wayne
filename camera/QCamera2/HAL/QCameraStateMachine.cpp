@@ -28,6 +28,7 @@
 */
 
 #define LOG_TAG "QCameraStateMachine"
+#include "QCameraCompat.h"
 
 // System dependencies
 #include <utils/Errors.h>

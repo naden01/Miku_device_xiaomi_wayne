@@ -28,6 +28,7 @@
 */
 
 #define LOG_TAG "QCamera2HWI"
+#include "QCameraCompat.h"
 
 // System dependencies
 #include <fcntl.h>

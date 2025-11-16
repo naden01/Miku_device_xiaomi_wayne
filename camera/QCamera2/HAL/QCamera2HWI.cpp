@@ -48,6 +48,7 @@
 #include "QCameraFlash.h"
 #include "QCameraTrace.h"
 #include "QCameraDisplay.h"
+#include "QCameraCompat.h"
 
 extern "C" {
 #include "mm_camera_dbg.h"

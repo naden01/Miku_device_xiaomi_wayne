@@ -28,6 +28,7 @@
  */
 
 #define LOG_TAG "QCameraMuxer"
+#include "QCameraCompat.h"
 
 // System dependencies
 #include <fcntl.h>
