@@ -123,10 +123,10 @@ PRODUCT_COPY_FILES += \
 # Display
 PRODUCT_PACKAGES += \
     gralloc.sdm660 \
-    hwcomposer.sdm660 \
-    memtrack.sdm660 \
+    # hwcomposer.sdm660 \
+    # memtrack.sdm660 \
     libdisplayconfig \
-    libgralloc.qti \
+    # libgralloc.qti \
     libtinyxml \
     libqdMetaData \
     libqdMetaData.system \
@@ -136,12 +136,12 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    # android.hardware.graphics.mapper@3.0-impl-qti-display \
+    # android.hardware.graphics.mapper@4.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.frameworks.displayservice@1.0 \
-    vendor.qti.hardware.display.allocator-service \
+    # vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.mapper@1.0.vendor \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
@@ -299,14 +299,14 @@ PRODUCT_PACKAGES += \
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
-    libhypv_intercept \
+    # libhypv_intercept \
     libmm-omxcore \
     libOmxCore \
-    libOmxAacEnc \
-    libOmxAmrEnc \
-    libOmxEvrcEnc \
-    libOmxG711Enc \
-    libOmxQcelp13Enc \
+    # libOmxAacEnc \
+    # libOmxAmrEnc \
+    # libOmxEvrcEnc \
+    # libOmxG711Enc \
+    # libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
@@ -410,7 +410,7 @@ PRODUCT_BOOT_JARS += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.qti
+    # android.hardware.thermal@2.0-service.qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
@@ -429,13 +429,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 27
 
 # Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+#PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+#PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    # android.hardware.usb@1.3-service-qti
 
 # VNDK
 PRODUCT_COPY_FILES += \
