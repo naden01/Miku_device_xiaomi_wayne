@@ -43,4 +43,8 @@
 #define CAMERA_FRAME_DATA_FD 0x002
 #endif
 
+#ifndef CAMERA_MSG_STATS_DATA
+#define CAMERA_MSG_STATS_DATA 0x1000
+#endif
+
 #endif // __QCAMERA_COMPAT_H__
