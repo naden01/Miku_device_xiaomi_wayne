@@ -307,6 +307,56 @@ ndk::ScopedAStatus Power::closeSessionChannel(int32_t, int32_t) {
     return ndk::ScopedAStatus::ok();
 }
 
+ndk::ScopedAStatus Power::getSupportInfo(::aidl::android::hardware::power::SupportInfo* _aidl_return) {
+    if (_aidl_return == nullptr) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
+    }
+    // Initialize support info - these features are not supported on this device
+    _aidl_return->usesSessions = HintManager::GetInstance()->IsAdpfSupported();
+    _aidl_return->boosts = 0L;
+    _aidl_return->modes = 0L;
+    _aidl_return->sessionHints = 0L;
+    _aidl_return->sessionModes = 0L;
+    _aidl_return->sessionTags = 0L;
+    _aidl_return->compositionData.isSupported = false;
+    _aidl_return->compositionData.disableGpuFences = false;
+    _aidl_return->compositionData.maxBatchSize = 0;
+    _aidl_return->compositionData.alwaysBatch = false;
+    _aidl_return->headroom.isCpuSupported = false;
+    _aidl_return->headroom.isGpuSupported = false;
+    _aidl_return->headroom.cpuMinIntervalMillis = 0;
+    _aidl_return->headroom.gpuMinIntervalMillis = 0;
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Power::getCpuHeadroom(const ::aidl::android::hardware::power::CpuHeadroomParams& /* in_params */,
+                                         ::aidl::android::hardware::power::CpuHeadroomResult* _aidl_return) {
+    if (_aidl_return == nullptr) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
+    }
+    // Not supported on this device
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::getGpuHeadroom(const ::aidl::android::hardware::power::GpuHeadroomParams& /* in_params */,
+                                         ::aidl::android::hardware::power::GpuHeadroomResult* _aidl_return) {
+    if (_aidl_return == nullptr) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_ILLEGAL_ARGUMENT);
+    }
+    // Not supported on this device
+    return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+}
+
+ndk::ScopedAStatus Power::sendCompositionData(const std::vector<::aidl::android::hardware::power::CompositionData>& /* in_data */) {
+    // Not supported on this device - silently ignore
+    return ndk::ScopedAStatus::ok();
+}
+
+ndk::ScopedAStatus Power::sendCompositionUpdate(const ::aidl::android::hardware::power::CompositionUpdate& /* in_update */) {
+    // Not supported on this device - silently ignore
+    return ndk::ScopedAStatus::ok();
+}
+
 }  // namespace pixel
 }  // namespace impl
 }  // namespace power

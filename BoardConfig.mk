@@ -99,8 +99,8 @@ TARGET_KERNEL_VERSION := 4.19
 TARGET_WITH_KERNEL_SU := true
 
 # OTA package
-TARGET_OTA_ALLOW_NON_AB := true
-AB_OTA_UPDATER := false
+# Enable A/B for retrofit dynamic partitions
+AB_OTA_UPDATER := true
 
 # Platform
 BOARD_VENDOR := xiaomi

@@ -38,6 +38,7 @@ cc_binary {
         "Power.cpp",
         "PowerExt.cpp",
         "PowerHintSession.cpp",
+        "PowerModeExtension.cpp",
         "PowerSessionManager.cpp",
         "UClampVoter.cpp",
         "SessionRecords.cpp",
