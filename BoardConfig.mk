@@ -81,6 +81,10 @@ TARGET_RECOVERY_DEVICE_MODULES := init_wayne
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
+# OTA package
+TARGET_OTA_ALLOW_NON_AB := true
+AB_OTA_UPDATER := false
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 1
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
@@ -97,10 +101,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/wayne
 TARGET_KERNEL_CONFIG := vendor/wayne_defconfig
 TARGET_KERNEL_VERSION := 4.19
 TARGET_WITH_KERNEL_SU := true
-
-# OTA package
-# Enable A/B for retrofit dynamic partitions
-AB_OTA_UPDATER := true
 
 # Platform
 BOARD_VENDOR := xiaomi
