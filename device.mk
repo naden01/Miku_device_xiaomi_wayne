@@ -11,7 +11,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/wayne/wayne-vendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -162,7 +161,7 @@ PRODUCT_PACKAGES += \
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+#PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Fastbootd
 PRODUCT_PACKAGES += \
